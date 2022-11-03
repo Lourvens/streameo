@@ -24,7 +24,7 @@ function Row({ title, url } : IRowProps) {
       <Header>{title}</Header>
       {!isFetched ? <CardSkeleton /> : null}
       <MovieWrapper>
-        {movie?.map(data =>  <Card data={data} key={data.id} /> )}
+        {movie?.map(data =>  <Card data={data} actionOnClick='add' key={data.id} /> )}
       </MovieWrapper>
     </Container>
   )

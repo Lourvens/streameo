@@ -23,9 +23,13 @@ export const favListSlice = createSlice({
       }
       state.values.push(action.payload)
     },
+    removeMovie: (state, action: PayloadAction<number>) => {
+      const movies = state.values.filter(v => action.payload !== v.id)
+      state.values = movies
+    }
   }
 })
 
-export const { addMovie } = favListSlice.actions
+export const { addMovie, removeMovie } = favListSlice.actions
 export const selectMovieList = (state: RootState) => state.favList.values
 export default favListSlice.reducer
