@@ -1,0 +1,23 @@
+/* GOOGLE Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Raleway:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary-900 text-white font-base
+  }
+}
+@layer utilities {
+  .scrollbar-y::-webkit-scrollbar {
+    height: .4375rem;
+    @apply bg-slate-700;
+  }
+  
+  .scrollbar-y::-webkit-scrollbar-thumb {
+    width: .375rem;
+    @apply bg-slate-500;
+  }
+}
