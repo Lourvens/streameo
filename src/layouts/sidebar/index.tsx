@@ -19,6 +19,8 @@ const Menu = tw.ul`flex flex-col gap-y-2 my-8`
 const Divider = tw.div`h-[2px] bg-slate-600 mx-4`
 
 function Sidebar() {
+  const location = useLocation()
+  
   return (
     <Wrapper id="docs-sidebar" style={{ backdropFilter: "blur(10px)" }}>
       <div className='mb-16 px-8'>
@@ -27,7 +29,7 @@ function Sidebar() {
       <Menu>
         {menuItems.map((data, i) => (
           <React.Fragment key={i}>
-            <MenuItem active={data.title == 'home'}  {...data} />
+            <MenuItem active={data.to == location.pathname}  {...data} />
           </React.Fragment>
         ))}
       </Menu>

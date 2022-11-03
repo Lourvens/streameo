@@ -15,7 +15,7 @@ const appRouter = [
     element: <List />
   },
   {
-    path: STREAMROUTE,
+    path: STREAMROUTE + '/:id',
     element: <Watch />
   }
 ]
