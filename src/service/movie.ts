@@ -9,9 +9,12 @@ export const poster_img_url = img_path + '/w500'
 
 const movieApi = axios.create({
   baseURL: '/api/movie',
+  headers: {
+    "Access-Control-Allow-Origin": "https://api.themoviedb.org"
+  },
   params: {
     api_key: '83b5e4608a426dcee1408add3aedde3b'
-  }
+  },
 })
 
 export const getMovies = async (url: string, params?: Partial<IMovieParams> ) => {
