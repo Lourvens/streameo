@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    {
+      "source":"/api/movie",
+      "destination": "https://api.themoviedb.org/3/"
+    }
+  ]
+}
