@@ -22,13 +22,13 @@ function Sidebar() {
       <div className='mb-16 px-8'>
         <BrandTitle />
       </div>
-      <div className={styles.menu}>
+      <ul className={styles.menu}>
         {menuItems.map((data, i) => (
           <React.Fragment key={i}>
             <MenuItem active={data.to == location.pathname}  {...data} />
           </React.Fragment>
         ))}
-      </div>
+      </ul>
       <div className={styles.divider} />
     </div>
   )

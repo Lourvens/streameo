@@ -13,7 +13,7 @@ function Row({ title, url } : IRowProps) {
   const { isFetched, movie } = useFetchMovie(url)
 
   return (
-    <div className={styles.movieWrapper}>
+    <div className={styles.container}>
       <h1 className={styles.title}>{title}</h1>
       {!isFetched ? <CardSkeleton /> : null}
       <div className={styles.movieWrapper}>

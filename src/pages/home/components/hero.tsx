@@ -9,7 +9,7 @@ import styles from './hero.style'
 
 // const starBox 
 function Hero() {
-  const { movie, error, isFetched } = useBrandMovie()
+  const { movie, isFetched } = useBrandMovie()
   const imageUrl = useMemo(() => `${original_img_url}${movie?.backdrop_path}`, [isFetched])
   const movieGenres = sortWithName(movie?.genre_ids)
 

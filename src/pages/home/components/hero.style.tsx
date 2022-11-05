@@ -10,12 +10,12 @@ const styles: Record<any, string> = {
   overview: 'text-slate-200  mt-2 text-sm',
   separator: 'h-6 w-0.5 bg-slate-100',
   btnGroup: 'mt-4 flex gap-x-6',
-  btn: `uppercase py-3 px-4 inline-flex justify-center items-center gap-2 rounded-full border
-    border-transparent font-semibold bg-red-600 text-white hover:bg-red-700 focus:outline-none
-    focus:ring-2 focus:ring-red-600focus:ring-offset-2 transition-all text-sm focus:ring-offset-gray-800`,
+  inheritBtn: 'uppercase py-3 px-4 inline-flex justify-center items-center gap-2 rounded-full border border-transparent font-semibold focus:outline-none focus:ring-2 text-white transition-all text-sm',
 }
 
-styles.addBtn = styles.btn + 'bg-slate-700 hover:bg-slate-500 focus:ring-slate-500'
+styles.addBtn = styles.inheritBtn + ' bg-slate-700 hover:bg-slate-500 focus:ring-slate-500'
+styles.btn = styles.inheritBtn + ' bg-red-600 hover:bg-red-700 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
 styles.gradientEffect = styles.absoluteEl + 'bg-gradient-to-t  from-slate-900'
+styles.img = styles.absoluteEl + 'object-cover'
 
 export default styles
