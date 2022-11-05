@@ -1,4 +1,4 @@
-import { HOMEROUTE, LISTROUTE, STREAMROUTE } from "@/router/constant";
+import { HOMEROUTE, LISTROUTE } from "@/router/constant";
 
 export const menuItems = [
   {
@@ -15,12 +15,5 @@ export const menuItems = [
       <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
     </>,
     to: LISTROUTE
-  },
-  {
-    title: 'stream',
-    path: <> 
-      <path d="M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zM9 11V5h6v6H9zm6 2v6H9v-6h6zM5 5h2v2H5V5zm0 4h2v2H5V9zm0 4h2v2H5v-2zm0 4h2v2H5v-2zm14.002 2H17v-2h2.002v2zm-.001-4H17v-2h2.001v2zm0-4H17V9h2.001v2zM17 7V5h2v2h-2z"></path>
-    </>,
-    to: STREAMROUTE
   },
 ]

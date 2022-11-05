@@ -4,7 +4,7 @@ import { createBrowserRouter, useRoutes } from 'react-router-dom'
 import Home from '@/pages/home'
 import List from '@/pages/list'
 import Watch from '@/pages'
-import { LISTROUTE, STREAMROUTE } from './constant'
+import { LISTROUTE } from './constant'
 
 const appRouter = [
   {
@@ -13,10 +13,6 @@ const appRouter = [
   }, {
     path: LISTROUTE,
     element: <List />
-  },
-  {
-    path: STREAMROUTE + '/:id',
-    element: <Watch />
   }
 ]
 const AppRoutes = () => {

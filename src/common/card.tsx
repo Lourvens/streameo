@@ -37,8 +37,8 @@ function Card({ data, actionOnClick } : CardProp) {
     } else {
       dispatch(removeMovie(data.id))
     }
-
   }
+  const moreBtnStyle = actionOnClick == 'remove' ? styles.btnRed : ''
   return (
     <div className={styles.container}>
       <div className='relative w-full h-[350px] overflow-hidden'>
@@ -50,7 +50,7 @@ function Card({ data, actionOnClick } : CardProp) {
         />
         <button 
           onClick={bookmarkHandleClick}
-          className={`${styles.floatBtn}`}
+          className={styles.floatBtn + ' ' + moreBtnStyle}
         >
           {
             actionOnClick == 'add' ?
