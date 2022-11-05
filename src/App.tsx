@@ -1,7 +1,8 @@
 import * as React from 'react';
-import tw from 'tailwind-styled-components'
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { Provider } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
+
 
 import AppRoutes from '@/router';
 import Sidebar from '@/layouts/sidebar';
@@ -11,9 +12,9 @@ import store from '@/store'
 
 const queryClient = new QueryClient();
 
-const Wrapper = tw.div`
-  w-full p-0 lg:pl-48
-`
+const styles = {
+  wrapper: 'w-full p-0 lg:pl-48'
+}
 
 function App() {
   return (
@@ -21,9 +22,10 @@ function App() {
       <Provider store={store}>
         <Navbar />
         <Sidebar />
-        <Wrapper>
+        <div className={styles.wrapper}>
           <AppRoutes />
-        </Wrapper>
+          <ToastContainer />
+        </div>
       </Provider>
 
     </QueryClientProvider>

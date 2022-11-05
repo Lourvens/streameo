@@ -1,32 +1,25 @@
-
 import React from 'react'
-import tw from 'tailwind-styled-components'
-import { useAppDispatch } from '@/hooks'
 import { MovieType, useFetchMovie } from '../home.controller'
-
 import CardSkeleton from './cardSkeleton'
 import Card from '@/common/card'
 
-
-import 'react-lazy-load-image-component/src/effects/blur.css'
-import IMovieData from '@/types/movie'
-
-const Container = tw.div`m-4  `
-const Header = tw.h1`text-2xl capitalize font-bold`
-const MovieWrapper = tw.div`relative my-2 flex gap-x-4 overflow-x-scroll lg:scrollbar-y`
+const styles = {
+  container: 'm-4',
+  title: 'text-2xl capitalize font-bold',
+  movieWrapper: 'relative my-2 flex gap-x-4 overflow-x-scroll lg:scrollbar-y'
+}
 
 function Row({ title, url } : IRowProps) {
   const { isFetched, movie } = useFetchMovie(url)
-  const dispatch = useAppDispatch()
 
   return (
-    <Container>
-      <Header>{title}</Header>
+    <div className={styles.movieWrapper}>
+      <h1 className={styles.title}>{title}</h1>
       {!isFetched ? <CardSkeleton /> : null}
-      <MovieWrapper>
+      <div className={styles.movieWrapper}>
         {movie?.map(data =>  <Card data={data} actionOnClick='add' key={data.id} /> )}
-      </MovieWrapper>
-    </Container>
+      </div>
+    </div>
   )
 }
 
