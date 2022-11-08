@@ -1,7 +1,4 @@
 {
-  "redirects": [
-    { "source": "/api/movie", "destination": "https://api.themoviedb.org/3/" }
-  ],
   "rewrites": [
     { "source": "/api/movie", "destination": "https://api.themoviedb.org/3/" }
   ]
