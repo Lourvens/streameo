@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import HomeView from './home.view'
+import HomeView from "./home.view";
 
 function Home() {
-  return (
-    <HomeView />
-  )
+  return <HomeView />;
 }
 
-export default Home
+export default Home;
